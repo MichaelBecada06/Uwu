@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        .blinking-border {
+            border-image: linear-gradient(20deg, purple, white, purple, white, purple) 1;
+            border: 2px solid purple;
+            border-radius: 50px;
+            padding: 50px;
+            animation: blink 2.2s infinite;
+        }
+
+        .blurred-background {
+            background: rgba(255, 255, 255, 0.7);
+            /* Adjust the alpha value for the desired background blur effect */
+            backdrop-filter: blur(20px);
+            /* Adjust the blur value for the desired background blur effect */
+        }
+
+        @keyframes blink {
+            20% {
+                border-color: purple;
+                background-color: transparent;
+            }
+
+            50% {
+                border-color: purple;
+                background-color: transparent;
+            }
+
+            100% {
+                border-color: purple;
+                background-color: transparent;
+            }
+
+            40% {
+                border-color: purple
+            }
+
+            55% {
+                border-color: white
+            }
+
+            30% {
+                border-color: purple
+            }
+
+            20% {
+                border-color: white
+            }
+        }
+
+        .blinking-element {
+            width: 200px;
+            height: 100px;
+            border: 3px solid white;
+            background-color: purple;
+            animation: blink 0.1s infinite;
+        }
+
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 8px rgb(129, 154, 181 , 0.43), -6px -6px 10px rgb(255 255 255);
+            text-align: right;
+            padding: 400px;
+            border-radius: 90px;
+            box-shadow: 2 2 100px rgba(2, 2, 2, 2.20);
+        }
+
+        .input[type="text"],
+        .input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: purple; /* Changed to purple */
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: purple; /* Changed to purple */
+            text-align: left;
+            border-radius: px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            margin: 0 0 50px;
+            color: #fff;
+        }
+
+        .container input {
+            width: 200%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 220px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background: white; /* Changed to white */
+            border: none;
+            color: purple; /* Changed to purple */
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background: #f0f0f0; /* Lightened hover color for better visibility */
+        }
+    </style>
+</head>
+
+<body style="background: conic-gradient(from 45deg, purple, white, purple, white);">
+    <section style="display: flex; justify-content: center; align-items: center; min-height: 80vh; width: 105%;font-color: white;">
+        <div class="blinking-border blurred-background">
+            <h1></h1>
+            <center>
+                <h1>Login</h1>
+                <form id="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <input type="submit" value="Login">
+                </form>
+            </center>
+        </div>
+        <script>
+            document.getElementById("login-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                // Simplified check for a valid username and password
+                if (username === "oiboy" && password === "oiboy") {
+                    // Redirect to the home page (jamboo.html)
+                    window.location.href = "Boy.html";
+                } else {
+                    alert("Invalid username or password. Please try again.");
+                }
+            });
+        </script>
+
+</body>
+
+</html>
